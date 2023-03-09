@@ -1,10 +1,10 @@
-giname: Docker Image CI
+name: Docker Image CI
 
 on:
   push:
-    branches: ['main']
+    branches: ['master']
   pull_request:
-    branches: ['main']
+    branches: ['master']
 
 env:
   DOCKER_IMAGE_NAME_MP2: felixdumais1/ants_build_mp2
@@ -38,3 +38,4 @@ jobs:
 
     - name: Pushing Docker image
       run: docker push ${{ env.DOCKER_IMAGE_NAME }}:latest
+
